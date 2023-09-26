@@ -1,9 +1,17 @@
 import React from "react";
 
-const Button = (props) => {
+const Button = ({ children, onClick, ...props }) => {
+  const handleClick = (e) => {
+    if (props.disabled) return;
+
+    if (onClick) {
+      onClick(e);
+    }
+  };
+
   return (
-    <button className={props.className} {...props}>
-      {props.content}
+    <button onClick={handleClick} {...props}>
+      {children}
     </button>
   );
 };

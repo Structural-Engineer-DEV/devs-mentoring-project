@@ -1,18 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const OptionsList = (props) => {
-  const { filteredOptions, isOpen } = props;
+  const { filteredOptions } = props;
 
   return (
-    <ul
-      className={`absolute top-24 left-0 w-full p-0 pb-4 bg-gray-300 text-center transition-opacity opacity-0 ${
-        isOpen ? "opacity-100" : "opacity-0"
-      }`}
-    >
+    <ul className="absolute top-24 left-0 w-full p-0 pb-4 bg-gray-300 text-center transition-opacity">
       {filteredOptions?.map((opt, i) => (
         <li
           key={i}
-          className="cursor-pointer text-xl my-2 mx-auto text-gray-600 hover:text-black hover:-translate-y-0.5 transition-all"
+          className="cursor-pointer text-lg mx-auto p-2 w-fit text-gray-600 hover:text-black hover:text-xl"
         >
           {opt}
         </li>

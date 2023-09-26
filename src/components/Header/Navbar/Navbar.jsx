@@ -1,21 +1,20 @@
 import React, { useState } from "react";
-import OptionsList from "./OptionsList/OptionsList";
 import categories from "../../../data/data.js";
+import OptionsList from "./OptionsList/OptionsList";
 
 const Navbar = () => {
   const [activeCategory, setActiveCategory] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
 
   const handleMouseEnter = (i) => {
-    setIsOpen(true);
     setActiveCategory(i);
   };
-  const handleMouseLeave = (e) => {
-    setIsOpen(false);
+  const handleMouseLeave = () => {
     setActiveCategory(null);
   };
 
   const filteredOptions = categories[activeCategory]?.options;
+
+  const isOpen = activeCategory !== null;
 
   return (
     <nav className="pt-10">
@@ -26,22 +25,16 @@ const Navbar = () => {
         {categories.map((cat, i) => (
           <li
             key={i}
-            className={`min-w-fit px-4 py-auto cursor-pointer text-lg h-full transition-all  text-gray-700   ${
+            className={`min-w-fit px-4 py-auto cursor-pointer text-lg h-full transition-all  text-gray-600   ${
               i === activeCategory &&
-              "underline text-black underline-offset-4 -translate-y-0.5"
+              "underline text-black/100 underline-offset-4"
             }`}
-            onMouseEnter={(e) => handleMouseEnter(i)}
+            onMouseEnter={() => handleMouseEnter(i)}
           >
             {cat.label}
           </li>
         ))}
-        {isOpen && (
-          <OptionsList
-            filteredOptions={filteredOptions}
-            onMouseLeave={handleMouseLeave}
-            isOpen={isOpen}
-          />
-        )}
+        {isOpen && <OptionsList filteredOptions={filteredOptions} />}
       </ul>
     </nav>
   );

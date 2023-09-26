@@ -8,18 +8,20 @@ import ProductPage from "./pages/ProductPage";
 import OrderConfirmation from "./pages/OrderConfirmation";
 import ShoppingCart from "./pages/ShoppingCart";
 import Checkout from "./pages/Checkout";
+import Layout from "./components/Layout/Layout";
 
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
       { path: "", element: <Home /> },
-      { path: "Listing", element: <Listing /> },
-      { path: "ProductPage", element: <ProductPage /> },
-      { path: "OrderConfirmation", element: <OrderConfirmation /> },
-      { path: "ShoppingCart", element: <ShoppingCart /> },
-      { path: "Checkout", element: <Checkout /> },
+      { path: "listing", element: <Listing /> },
+      { path: "product-page", element: <ProductPage /> },
+      { path: "order-confirmation", element: <OrderConfirmation /> },
+      { path: "shopping-cart", element: <ShoppingCart /> },
+      { path: "checkout", element: <Checkout /> },
     ],
   },
 ]);

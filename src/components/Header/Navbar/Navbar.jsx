@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import categories from "../../../data/data.js";
+import { categories } from "../../../data/data.js";
 import OptionsList from "./OptionsList/OptionsList";
 
 const Navbar = () => {

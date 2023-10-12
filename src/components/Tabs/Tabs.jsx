@@ -10,6 +10,8 @@ const Tabs = (props) => {
     setActiveTab(id);
   };
 
+  const activeContent = tabsData.find((tab) => tab.id === activeTab).content;
+
   return (
     <section className="bg-transparent m-20 flex flex-col h-52 ">
       <TabsList
@@ -17,7 +19,7 @@ const Tabs = (props) => {
         onActiveTabChange={handleActiveTabChange}
         activeTab={activeTab}
       />
-      <TabsContent activeTabsData={tabsData[activeTab].content} />
+      <TabsContent activeTabsData={activeContent} />
     </section>
   );
 };

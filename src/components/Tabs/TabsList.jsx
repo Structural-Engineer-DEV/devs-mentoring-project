@@ -8,10 +8,11 @@ const TabsList = (props) => {
         <button
           className={`box-border
          bg-gray-200 h-12 w-28 border-2 z-10  border-gray-300  -mb-0.5 ${
-           i === activeTab && "bg-gray-50 border-b-transparent  cursor-default"
+           tab.id === activeTab &&
+           "bg-gray-50 border-b-transparent  cursor-default"
          }`}
           key={i}
-          onClick={() => onActiveTabChange(i)}
+          onClick={() => onActiveTabChange(tab.id)}
         >
           {tab.label}
         </button>

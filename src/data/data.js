@@ -30,7 +30,7 @@ const tabsData = [
   { id: 1, label: "Tab 2", content: "Tab2 Content" },
   { id: 2, label: "Tab 3", content: "Tab3 Content" },
   { id: 3, label: "Tab 4", content: "Tab4 Content" },
-  { id: 66, label: "Tab 5", content: "Tab5 Content" },
+  { id: 4, label: "Tab 5", content: "Tab5 Content" },
   { id: 5, label: "Tab 6", content: "Tab6 Content" },
   { id: 6, label: "Tab 7", content: "Tab7 Content" },
   { id: 7, label: "Tab 8", content: "Tab8 Content" },

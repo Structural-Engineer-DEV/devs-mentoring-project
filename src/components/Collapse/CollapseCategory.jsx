@@ -7,8 +7,8 @@ const CollapseCategory = (props) => {
   return (
     <div className="flex flex-col items-center w-full border-t last:border-b border-gray-400">
       <div
-        className={`flex justify-between cursor-pointer caret-transparent p-1  w-full text-gray-500 hover:text-black group ${
-          isOpen ? "text-black" : ""
+        className={`flex justify-between cursor-pointer caret-transparent p-1  w-full hover:text-black group ${
+          isOpen ? `text-black` : `text-gray-500 `
         }`}
         onClick={() => setIsOpen((prev) => !prev)}
       >

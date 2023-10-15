@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const DropdownList = (props) => {
   const { sortByList, isOpen, handleTraitClick, sortBy } = props;
@@ -6,7 +7,12 @@ const DropdownList = (props) => {
   return (
     <>
       {isOpen && (
-        <div className="flex flex-col bg-gray-100 absolute items-end right-0 rounded-md whitespace-nowrap">
+        <motion.div
+          className="flex flex-col bg-gray-100 absolute items-end right-0 rounded-md whitespace-nowrap"
+          initial={{ opacity: 0, y: -5 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.05 }}
+        >
           {sortByList.map((trait) => (
             <div className="flex items-end px-2 py-0.5">
               <button
@@ -20,7 +26,7 @@ const DropdownList = (props) => {
               </button>
             </div>
           ))}
-        </div>
+        </motion.div>
       )}
     </>
   );

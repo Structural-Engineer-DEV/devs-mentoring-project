@@ -25,4 +25,13 @@ const categories = [
   },
 ];
 
-export default categories;
+const collapseData = [
+  { id: 0, label: "Collapse 1", content: "Collapse 1 content" },
+  { id: 1, label: "Collapse 2", content: "Collapse 2 content" },
+  { id: 2, label: "Collapse 3", content: "Collapse 3 content" },
+  { id: 3, label: "Collapse 4", content: "Collapse 4 content" },
+  { id: 4, label: "Collapse 5", content: "Collapse 5 content" },
+  { id: 5, label: "Collapse 6", content: "Collapse 6 content" },
+];
+
+export { categories, collapseData };

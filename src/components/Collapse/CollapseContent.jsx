@@ -1,16 +1,29 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
-const CollapseContent = (props) => {
+const CollapseContent = ({ isOpen, children }) => {
   return (
-    <motion.div
-      className="my-4"
-      initial={{ opacity: 0, y: -5 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.05 }}
-    >
-      {props.children}
-    </motion.div>
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          key="collapse-content"
+          initial={{ opacity: 0, height: 0, marginBottom: 0, marginTop: 0 }}
+          animate={{
+            opacity: 1,
+            height: "fit-content",
+            marginBottom: "1rem",
+            marginTop: "1rem",
+          }}
+          exit={{ opacity: 0, height: 0, marginBottom: 0, marginTop: 0 }}
+          transition={{
+            opacity: { duration: 0.1 },
+            height: { duration: 0.1 },
+          }}
+        >
+          {children}
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 

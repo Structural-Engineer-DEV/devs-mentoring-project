@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import CollapseContent from "./CollapseContent";
 
-const CollapseCategory = (props) => {
+const CollapseCategory = ({ data }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { data } = props;
+
   return (
     <div className="flex flex-col items-center w-full border-t last:border-b border-gray-400">
       <div
@@ -21,7 +21,7 @@ const CollapseCategory = (props) => {
           }`}
         />
       </div>
-      {isOpen && <CollapseContent>{data.content}</CollapseContent>}
+      <CollapseContent isOpen={isOpen}>{data.content}</CollapseContent>
     </div>
   );
 };

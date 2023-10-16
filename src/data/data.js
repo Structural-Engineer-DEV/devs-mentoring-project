@@ -25,4 +25,18 @@ const categories = [
   },
 ];
 
-export default categories;
+const tabsData = [
+  { id: 0, label: "Tab 1", content: "Tab1 Content" },
+  { id: 1, label: "Tab 2", content: "Tab2 Content" },
+  { id: 2, label: "Tab 3", content: "Tab3 Content" },
+  { id: 3, label: "Tab 4", content: "Tab4 Content" },
+  { id: 4, label: "Tab 5", content: "Tab5 Content" },
+  { id: 5, label: "Tab 6", content: "Tab6 Content" },
+  { id: 6, label: "Tab 7", content: "Tab7 Content" },
+  { id: 7, label: "Tab 8", content: "Tab8 Content" },
+  { id: 8, label: "Tab 9", content: "Tab9 Content" },
+  { id: 9, label: "Tab 10", content: "Tab10 Content" },
+  { id: 19, label: "Tab 11", content: "Tab11 Content" },
+];
+
+export { categories, tabsData };

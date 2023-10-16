@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="my-0 flex justify-between bg-gradient-to-b from-gray-500 to-gray-300 top-0 sticky">
+    <div className="my-0 flex justify-between bg-gradient-to-b from-gray-500 to-gray-300 top-0 sticky z-40">
       <Button>
         <Link to="/">
           <MainIcon className="h-24 w-24 ml-10 self-center" />

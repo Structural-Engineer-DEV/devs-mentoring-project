@@ -2,28 +2,29 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const DropdownList = (props) => {
-  const { sortByList, isOpen, handleTraitClick, sortBy } = props;
+  const { SORT_OPTIONS, isOpen, handleTraitClick, sortBy } = props;
 
   return (
     <AnimatePresence>
       {isOpen && (
         <motion.div
           className="flex flex-col bg-gray-100 absolute items-end right-0 rounded-md whitespace-nowrap"
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -5 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.05 }}
           exit={{ opacity: 0, y: -5 }}
         >
-          {sortByList.map((trait) => (
+          {SORT_OPTIONS.map((option) => (
             <div className="flex items-end px-2 py-0.5">
               <button
-                key={trait}
+                key={option}
                 className={`text-gray-500 ${
-                  sortBy !== trait ? "hover:text-black" : "cursor-not-allowed"
+                  sortBy !== option ? "hover:text-black" : "cursor-not-allowed"
                 }`}
-                onClick={() => handleTraitClick(trait)}
+                onClick={() => {
+                  if (sortBy !== option) handleTraitClick(option);
+                }}
               >
-                {trait}
+                {option}
               </button>
             </div>
           ))}

@@ -1,29 +1,29 @@
 import React, { useState } from "react";
-import DropdownList from "./DropdownList";
 import { useClickAway } from "@uidotdev/usehooks";
+import DropdownList from "./DropdownList";
+
+const SORT_OPTIONS = [
+  "Polecane",
+  "Najnowsze",
+  "Cena: od najniższej",
+  "Cena: od najwyższej",
+];
 
 const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [sortBy, setSortBy] = useState(null);
 
-  const sortByList = [
-    "Polecane",
-    "Najnowsze",
-    "Cena: od najniższej",
-    "Cena: od najwyższej",
-  ];
-
-  const handleTraitClick = (trait) => {
-    setSortBy(trait);
+  const handleTraitClick = (option) => {
+    setSortBy(option);
     setIsOpen(false);
   };
 
-  const clickAwayRef = useClickAway((e) => {
-    if (!e.target.closest("#dropdown-container")) setIsOpen(false);
+  const clickAwayRef = useClickAway(() => {
+    setIsOpen(false);
   });
 
   return (
-    <div id="dropdown-container" className="relative" ref={clickAwayRef}>
+    <div className="relative" ref={clickAwayRef}>
       <div
         className="flex justify-end cursor-pointer caret-transparent m-1"
         onClick={() => setIsOpen((prev) => !prev)}
@@ -38,7 +38,7 @@ const Dropdown = () => {
         />
       </div>
       <DropdownList
-        sortByList={sortByList}
+        SORT_OPTIONS={SORT_OPTIONS}
         isOpen={isOpen}
         handleTraitClick={handleTraitClick}
         sortBy={sortBy}

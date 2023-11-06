@@ -1,14 +1,20 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 import TabsList from "./TabsList";
 import TabsContent from "./TabsContent";
-import { tabsData } from "../../data/data";
 
-export const TabsContext = createContext();
+const TabsContext = createContext();
+export const useTabsContext = () => {
+  const context = useContext(TabsContext);
+  if (context === undefined) {
+    throw new Error("Tabs must be used within a ContextProvider");
+  }
+  return context;
+};
 
-const Tabs = ({ children }) => {
+const Tabs = ({ tabsData, children }) => {
   const [activeTab, setActiveTab] = useState(0);
 
-  const onActiveTabChange = (id) => {
+  const handleActiveTabChange = (id) => {
     setActiveTab(id);
   };
 
@@ -16,7 +22,7 @@ const Tabs = ({ children }) => {
 
   return (
     <TabsContext.Provider
-      value={{ tabsData, activeContent, onActiveTabChange, activeTab }}
+      value={{ tabsData, activeContent, handleActiveTabChange, activeTab }}
     >
       <section className="bg-transparent m-20 flex flex-col h-52 ">
         {children}
@@ -25,7 +31,7 @@ const Tabs = ({ children }) => {
   );
 };
 
-export default Tabs;
-
 Tabs.List = TabsList;
 Tabs.Content = TabsContent;
+
+export default Tabs;

@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import { TabsContext } from "./Tabs";
+import React from "react";
+import { useTabsContext } from "./Tabs";
 
 const TabsList = ({ children }) => {
-  const { tabsData, onActiveTabChange, activeTab } = useContext(TabsContext);
+  const { tabsData, handleActiveTabChange, activeTab } = useTabsContext();
   return (
     <div className="bg-transparent h-auto flex align-middle justify-between">
       {tabsData.map((tab, i) => (
@@ -13,7 +13,7 @@ const TabsList = ({ children }) => {
            "bg-gray-50 border-b-transparent  cursor-default text-black"
          }`}
           key={i}
-          onClick={() => onActiveTabChange(tab.id)}
+          onClick={() => handleActiveTabChange(tab.id)}
         >
           {tab.label}
         </button>

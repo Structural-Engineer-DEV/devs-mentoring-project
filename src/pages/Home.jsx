@@ -9,11 +9,7 @@ import { cardsData, products, tabsData } from "../data/data";
 const Home = () => {
   return (
     <div className="flex flex-col items-center justify-start">
-      <HeroSection
-        backgroundPhoto={Hero}
-        mainText="MAIN TEXT MAIN TEXT MAIN TEXT MAIN TEXT MAIN TEXT MAIN TEXT"
-        buttonText="Dowiedz się więcej"
-      />
+      <HeroSection />
       <NewestProducts
         products={products.slice(-3)}
         buttonText="Dowiedz się więcej"

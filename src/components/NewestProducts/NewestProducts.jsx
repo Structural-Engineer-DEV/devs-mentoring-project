@@ -11,7 +11,6 @@ const NewestProducts = ({ products, buttonText }) => {
           product={product}
           buttonText={buttonText}
           leftSided={(i + 1) % 2}
-          // leftSided={true}
         />
       ))}
     </>

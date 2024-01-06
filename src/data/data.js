@@ -48,4 +48,133 @@ const collapseData = [
   { id: 5, label: "Collapse 6", content: "Collapse 6 content" },
 ];
 
-export { categories, collapseData, tabsData };
+const productsData = [
+  {
+    id: 0,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCF961H2G-QW/DCF961H2G_1.jpg?resize=530x530",
+    description: "Product 1",
+    price: "Price for product 1",
+  },
+  {
+    id: 1,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/D25881K-QS/D25881K_1.jpg?resize=530x530",
+    description: "Product 2",
+    price: "Price for product 2",
+  },
+  {
+    id: 2,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCF961H2T-QW/DCF961H2T_1.jpg?resize=530x530",
+    description: "Product 3",
+    price: "Price for product 3",
+  },
+  {
+    id: 3,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCH911NK-XJ/DCH911NK_1.jpg?resize=530x530",
+    description: "Product 4",
+    price: "Price for product 4",
+  },
+  {
+    id: 4,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCK200ME2GT-QW/DCK200ME2GT_K1.jpg?resize=530x530",
+    description: "Product 5",
+    price: "Price for product 5",
+  },
+  {
+    id: 5,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCD85ME2GT-QW/DCD85ME2GT_1.jpg?resize=530x530",
+    description: "Product 6",
+    price: "Price for product 6",
+  },
+  {
+    id: 6,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCFA4141-QZ/DCFA4141_1.jpg?resize=530x530",
+    description: "Product 7",
+    price: "Price for product 7",
+  },
+  {
+    id: 7,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCFA4141-QZ/DCFA4141_1.jpg?resize=530x530",
+    description: "Product 8",
+    price: "Price for product 8",
+  },
+  {
+    id: 8,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCF403D2GT-QW/DCF403D2GT_K1.jpg?resize=530x530",
+    description: "Product 9",
+    price: "Price for product 9",
+  },
+  {
+    id: 9,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DT3367-QZ/DT3367_1.jpg?resize=530x530",
+    description: "Product 10",
+    price: "Price for product 10",
+  },
+  {
+    id: 10,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCW604N-XJ/DCW604N_1.jpg?resize=530x530",
+    description: "Product 11",
+    price: "Price for product 11",
+  },
+  {
+    id: 11,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCW600N-XJ/DCW600N_1.jpg?resize=530x530",
+    description: "Product 12",
+    price: "Price for product 12",
+  },
+  {
+    id: 12,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCW604NT-XJ/DCW604NT_1.jpg?resize=530x530",
+    description: "Product 13",
+    price: "Price for product 13",
+  },
+  {
+    id: 13,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCP580P2-QW/DCP580P2_1.jpg?resize=530x530",
+    description: "Product 14",
+    price: "Price for product 14",
+  },
+  {
+    id: 14,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/D26203-QS/D26203.jpg?resize=530x530",
+    description: "Product 15",
+    price: "Price for product 15",
+  },
+  {
+    id: 15,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/D26204K-QS/D26204K.jpg?resize=530x530",
+    description: "Product 16",
+    price: "Price for product 16",
+  },
+  {
+    id: 16,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DW680K-QS/DW680K_1.jpg?resize=530x530",
+    description: "Product 17",
+    price: "Price for product 17",
+  },
+  {
+    id: 17,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DW621-QS/DW621_1.jpg?resize=530x530",
+    description: "Product 18",
+    price: "Price for product 18",
+  },
+  {
+    id: 18,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCMPW1600N-XJ/DCMPW1600_1.jpg?resize=530x530",
+    description: "Product 19",
+    price: "Price for product 19",
+  },
+  {
+    id: 19,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCMPP568P1-QW/DCMPP568P1_1.jpg?resize=530x530",
+    description: "Product 20",
+    price: "Price for product 20",
+  },
+  {
+    id: 20,
+    img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCM575X1-QW/DCM575X1_1.jpg?resize=530x530",
+    description: "Product 21",
+    price: "Price for product 21",
+  },
+];
+
+export { categories, collapseData, tabsData, productsData };

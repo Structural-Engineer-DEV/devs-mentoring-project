@@ -3,18 +3,18 @@ import { useClickAway } from "@uidotdev/usehooks";
 import DropdownList from "./DropdownList";
 
 const SORT_OPTIONS = [
-  "Polecane",
+  "Popularne",
   "Najnowsze",
   "Cena: od najniższej",
   "Cena: od najwyższej",
 ];
 
-const Dropdown = () => {
+const Dropdown = ({ trait, setTrait, options = SORT_OPTIONS }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [sortBy, setSortBy] = useState(null);
+  // const [sortBy, setSortBy] = useState(null);
 
   const handleTraitClick = (option) => {
-    setSortBy(option);
+    setTrait(option);
     setIsOpen(false);
   };
 
@@ -28,7 +28,7 @@ const Dropdown = () => {
         className="flex justify-end cursor-pointer caret-transparent m-1"
         onClick={() => setIsOpen((prev) => !prev)}
       >
-        Sortuj wg {sortBy ? `: ${sortBy}` : ""}
+        Sortuj wg {trait ? `: ${trait}` : ""}
         <div
           className={`ml-2 border-8 border-transparent ${
             isOpen
@@ -38,10 +38,10 @@ const Dropdown = () => {
         />
       </div>
       <DropdownList
-        SORT_OPTIONS={SORT_OPTIONS}
+        options={options}
         isOpen={isOpen}
         handleTraitClick={handleTraitClick}
-        sortBy={sortBy}
+        trait={trait}
       />
     </div>
   );

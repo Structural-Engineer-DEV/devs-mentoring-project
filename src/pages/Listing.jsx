@@ -1,7 +1,8 @@
 import React from "react";
+import ProductsListing from "../components/ProductsListing/ProductsListing";
 
 const Listing = () => {
-  return <div className="text-9xl min-h-screen text-center"></div>;
+  return <ProductsListing />;
 };
 
 export default Listing;

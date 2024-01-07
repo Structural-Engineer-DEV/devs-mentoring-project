@@ -4,7 +4,7 @@ import ProductCard from "./ProductCard";
 
 const num = 4;
 
-const ProductsGrid = () => {
+const ProductsGrid = ({ setNumOfProducts, sortBy }) => {
   const [viewedProducts, setViewedProducts] = useState(
     productsData.slice(0, num)
   );
@@ -33,6 +33,38 @@ const ProductsGrid = () => {
       }
     };
   }, [viewedProducts]);
+
+  useEffect(() => {
+    setNumOfProducts(productsData.length);
+  }, []);
+
+  useEffect(() => {
+    const productsDataCopy = [...viewedProducts];
+    switch (sortBy) {
+      case "Popularne":
+        productsDataCopy.sort((productA, productB) => {
+          return productB.numOfPurchase - productA.numOfPurchase;
+        });
+        break;
+      case "Najnowsze":
+        productsDataCopy.sort((productA, productB) => {
+          return productA.date.getTime() - productB.date.getTime();
+        });
+        break;
+      case "Cena: od najniższej":
+        productsDataCopy.sort((productA, productB) => {
+          return productA.price - productB.price;
+        });
+        break;
+      case "Cena: od najwyższej":
+        productsDataCopy.sort((productA, productB) => {
+          return productB.price - productA.price;
+        });
+        break;
+      default:
+    }
+    setViewedProducts(productsDataCopy);
+  }, [sortBy]);
 
   return (
     <div className="grid grid-cols-3 gap-10 ml-8">

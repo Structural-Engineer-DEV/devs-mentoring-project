@@ -48,4 +48,58 @@ const collapseData = [
   { id: 5, label: "Collapse 6", content: "Collapse 6 content" },
 ];
 
-export { categories, collapseData, tabsData };
+const products = [
+  {
+    id: 0,
+    name: "Product1",
+    description:
+      "Product1 description Product1 description Product1 description",
+    image:
+      "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCD85ME2GT-QW/DCD85ME2GT_1.jpg?resize=530x530",
+  },
+  {
+    id: 1,
+    name: "Product2",
+    description:
+      "Product2 description Product2 description Product2 description",
+    image:
+      "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCD999X1-QW/DCD999X1_1.jpg?resize=530x530",
+  },
+  {
+    id: 2,
+    name: "Product3",
+    description:
+      "Product3 description Product3 description Product3 description",
+    image:
+      "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/D215825-XJ/D215825_1.jpg?resize=530x530",
+  },
+];
+
+const cardsData = [
+  {
+    id: 0,
+    title: "Card1",
+    description: "Description card1",
+    buttonText: "Dowiedz się więcej1",
+    image:
+      "https://images.unsplash.com/photo-1426927308491-6380b6a9936f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG9vbHxlbnwwfHwwfHx8MA%3D%3D",
+  },
+  {
+    id: 1,
+    title: "Card2",
+    description: "Description card2",
+    buttonText: "Dowiedz się więcej2",
+    image:
+      "https://plus.unsplash.com/premium_photo-1661897931465-8974f15313a5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dG9vbHxlbnwwfHwwfHx8MA%3D%3D",
+  },
+  {
+    id: 2,
+    title: "Card3",
+    description: "Description card3",
+    buttonText: "Dowiedz się więcej3",
+    image:
+      "https://images.unsplash.com/photo-1518709414768-a88981a4515d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHRvb2x8ZW58MHx8MHx8fDA%3D",
+  },
+];
+
+export { categories, collapseData, tabsData, products, cardsData };

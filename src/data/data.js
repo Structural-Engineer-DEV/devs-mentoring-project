@@ -102,4 +102,30 @@ const cardsData = [
   },
 ];
 
-export { categories, collapseData, tabsData, products, cardsData };
+const productsDetails = {
+  title: '18V XR Brushless 8mm (1/4") Router - 2 X 5Ah',
+  photos: [
+    "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCD999X1-QW/DCD999X1_1.jpg?resize=530x530",
+    "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCD999X1-QW/DCD999X1_2.jpg?resize=530x530",
+    "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCD999X1-QW/DCD999X1_4.jpg?resize=530x530",
+    "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCD999X1-QW/DCD999X1_A1.jpg?resize=530x530",
+    "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCD999X1-QW/DCD999X1_A3.jpg?resize=530x530",
+    "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCD999X1-QW/DCD999X1_A5.jpg?resize=530x530",
+    "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCD999X1-QW/DCD999X1_F2.jpg?resize=530x530",
+    "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCD999X1-QW/DCD999X1_K1.jpg?resize=530x530",
+  ],
+  features: [
+    "Technologia narzędziowa FLEXVOLT ADVANTAGE: narzędzie wykorzystuje inteligentną elektronikę, aby wykryć, jaki akumulator jest w narzędziu i zwiększyć moc i moment obrotowy podczas korzystania z akumulatorów FLEXVOLT",
+    "51% więcej mocy przy zastosowaniu akumulatora DCB547 XR FLEXVOLT 9 Ah w porównaniu z akumulatorem DCB184 18 V XR 5 Ah",
+    "O 42% więcej mocy przy zastosowaniu akumulatora DCB546 XR FLEXVOLT 6 Ah w porównaniu z akumulatorem DCB184 18 V XR 5 Ah",
+  ],
+};
+
+export {
+  categories,
+  collapseData,
+  tabsData,
+  products,
+  cardsData,
+  productsDetails,
+};

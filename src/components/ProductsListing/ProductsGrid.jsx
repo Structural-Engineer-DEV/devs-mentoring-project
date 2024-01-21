@@ -1,10 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { productsData } from "../../data/data";
 import ProductCard from "./ProductCard";
+import { ProductsContext } from "./ProductsListing";
 
-const num = 4;
+const num = 9;
 
-const ProductsGrid = ({ setNumOfProducts, sortBy }) => {
+const ProductsGrid = () => {
+  const { setNumOfProducts, sortBy } = useContext(ProductsContext);
   const [viewedProducts, setViewedProducts] = useState(
     productsData.slice(0, num)
   );
@@ -17,12 +19,10 @@ const ProductsGrid = ({ setNumOfProducts, sortBy }) => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
       if (entry.isIntersecting && viewedProducts.length < productsData.length) {
-        setTimeout(() => {
-          setViewedProducts((prev) => [
-            ...prev,
-            ...productsData.slice(prev.length, prev.length + num),
-          ]);
-        }, 1000);
+        setViewedProducts((prev) => [
+          ...prev,
+          ...productsData.slice(prev.length, prev.length + num),
+        ]);
       }
     });
     observer.observe(cardRef.current);
@@ -67,14 +67,12 @@ const ProductsGrid = ({ setNumOfProducts, sortBy }) => {
   }, [sortBy]);
 
   return (
-    <div className="grid grid-cols-3 gap-10 ml-8">
+    <div className="grid grid-cols-3 gap-10 ml-8 min-h-full">
       {viewedProducts.map((product, index, arr) => (
         <ProductCard
           key={product.id}
           product={product}
           {...(index === arr.length - 1 ? { ref: cardRef } : "")}
-          // {...(index === arr.length - 1 ? (ref = { ref }) : "")}
-          // Wczesniej tak to robilem, ale teraz nie dziala, dlaczego???
         />
       ))}
     </div>

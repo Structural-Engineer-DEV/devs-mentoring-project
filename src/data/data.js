@@ -52,7 +52,7 @@ const productsData = [
   {
     id: 0,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCF961H2G-QW/DCF961H2G_1.jpg?resize=530x530",
-    description: "Product 1",
+    title: "Product 1",
     price: "10",
     date: new Date("2023-01-01"),
     numOfPurchase: 11,
@@ -61,7 +61,7 @@ const productsData = [
   {
     id: 1,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/D25881K-QS/D25881K_1.jpg?resize=530x530",
-    description: "Product 2",
+    title: "Product 2",
     price: "111",
     date: new Date("2023-01-02"),
     numOfPurchase: 55,
@@ -70,7 +70,7 @@ const productsData = [
   {
     id: 2,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCF961H2T-QW/DCF961H2T_1.jpg?resize=530x530",
-    description: "Product 3",
+    title: "Product 3",
     price: "552",
     date: new Date("2023-01-11"),
     numOfPurchase: 1,
@@ -79,7 +79,7 @@ const productsData = [
   {
     id: 3,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCH911NK-XJ/DCH911NK_1.jpg?resize=530x530",
-    description: "Product 4",
+    title: "Product 4",
     price: "75",
     date: new Date("2023-02-01"),
     numOfPurchase: 0,
@@ -88,7 +88,7 @@ const productsData = [
   {
     id: 4,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCK200ME2GT-QW/DCK200ME2GT_K1.jpg?resize=530x530",
-    description: "Product 5",
+    title: "Product 5",
     price: "412",
     date: new Date("2023-04-01"),
     numOfPurchase: 85,
@@ -97,7 +97,7 @@ const productsData = [
   {
     id: 5,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCD85ME2GT-QW/DCD85ME2GT_1.jpg?resize=530x530",
-    description: "Product 6",
+    title: "Product 6",
     price: "4523",
     date: new Date("2023-06-01"),
     numOfPurchase: 888,
@@ -106,7 +106,7 @@ const productsData = [
   {
     id: 6,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCFA4141-QZ/DCFA4141_1.jpg?resize=530x530",
-    description: "Product 7",
+    title: "Product 7",
     price: "523",
     date: new Date("2023-01-21"),
     numOfPurchase: 1420,
@@ -115,7 +115,7 @@ const productsData = [
   {
     id: 7,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DWMT81610-0/DWMT81610-0_1.jpg?resize=530x530",
-    description: "Product 8",
+    title: "Product 8",
     price: "41",
     date: new Date("2023-01-03"),
     numOfPurchase: 15,
@@ -124,7 +124,7 @@ const productsData = [
   {
     id: 8,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCF403D2GT-QW/DCF403D2GT_K1.jpg?resize=530x530",
-    description: "Product 9",
+    title: "Product 9",
     price: "48",
     date: new Date("2023-09-01"),
     numOfPurchase: 118,
@@ -133,7 +133,7 @@ const productsData = [
   {
     id: 9,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DT3367-QZ/DT3367_1.jpg?resize=530x530",
-    description: "Product 10",
+    title: "Product 10",
     price: "85",
     date: new Date("2023-11-01"),
     numOfPurchase: 1152,
@@ -142,7 +142,7 @@ const productsData = [
   {
     id: 10,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCW604N-XJ/DCW604N_1.jpg?resize=530x530",
-    description: "Product 11",
+    title: "Product 11",
     price: "99",
     date: new Date("2023-07-01"),
     numOfPurchase: 81,
@@ -151,7 +151,7 @@ const productsData = [
   {
     id: 11,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCW600N-XJ/DCW600N_1.jpg?resize=530x530",
-    description: "Product 12",
+    title: "Product 12",
     price: "999",
     date: new Date("2023-02-11"),
     numOfPurchase: 22,
@@ -160,7 +160,7 @@ const productsData = [
   {
     id: 12,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCW604NT-XJ/DCW604NT_1.jpg?resize=530x530",
-    description: "Product 13",
+    title: "Product 13",
     price: "666",
     date: new Date("2023-08-11"),
     numOfPurchase: 2335,
@@ -169,7 +169,7 @@ const productsData = [
   {
     id: 13,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCP580P2-QW/DCP580P2_1.jpg?resize=530x530",
-    description: "Product 14",
+    title: "Product 14",
     price: "745",
     date: new Date("2023-09-08"),
     numOfPurchase: 472,
@@ -178,7 +178,7 @@ const productsData = [
   {
     id: 14,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/D26203-QS/D26203.jpg?resize=530x530",
-    description: "Product 15",
+    title: "Product 15",
     price: "1",
     date: new Date("2023-01-09"),
     numOfPurchase: 1785,
@@ -187,7 +187,7 @@ const productsData = [
   {
     id: 15,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/D26204K-QS/D26204K.jpg?resize=530x530",
-    description: "Product 16",
+    title: "Product 16",
     price: "744",
     date: new Date("2023-03-01"),
     numOfPurchase: 785,
@@ -196,7 +196,7 @@ const productsData = [
   {
     id: 16,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DW680K-QS/DW680K_1.jpg?resize=530x530",
-    description: "Product 17",
+    title: "Product 17",
     price: "88",
     date: new Date("2023-10-10"),
     numOfPurchase: 99,
@@ -205,7 +205,7 @@ const productsData = [
   {
     id: 17,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DW621-QS/DW621_1.jpg?resize=530x530",
-    description: "Product 18",
+    title: "Product 18",
     price: "77",
     date: new Date("2023-11-11"),
     numOfPurchase: 0,
@@ -214,7 +214,7 @@ const productsData = [
   {
     id: 18,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCMPW1600N-XJ/DCMPW1600_1.jpg?resize=530x530",
-    description: "Product 19",
+    title: "Product 19",
     price: "852",
     date: new Date("2023-12-22"),
     numOfPurchase: 25,
@@ -223,7 +223,7 @@ const productsData = [
   {
     id: 19,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCMPP568P1-QW/DCMPP568P1_1.jpg?resize=530x530",
-    description: "Product 20",
+    title: "Product 20",
     price: "582",
     date: new Date("2023-08-25"),
     numOfPurchase: 85,
@@ -232,7 +232,7 @@ const productsData = [
   {
     id: 20,
     img: "https://www.dewalt.pl/EMEA/PRODUCT/IMAGES/HIRES/DCM575X1-QW/DCM575X1_1.jpg?resize=530x530",
-    description: "Product 21",
+    title: "Product 21",
     price: "852",
     date: new Date("2023-01-14"),
     numOfPurchase: 8,

@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { useClickAway } from "@uidotdev/usehooks";
 import DropdownList from "./DropdownList";
 
-const SORT_OPTIONS = [
+const DEFAULT_OPTIONS = [
   "Popularne",
   "Najnowsze",
   "Cena: od najniższej",
   "Cena: od najwyższej",
 ];
 
-const Dropdown = ({ trait, setTrait, options = SORT_OPTIONS }) => {
+const Dropdown = ({ trait, setTrait, options = DEFAULT_OPTIONS }) => {
   const [isOpen, setIsOpen] = useState(false);
   // const [sortBy, setSortBy] = useState(null);
 
